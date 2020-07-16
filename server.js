@@ -52,6 +52,6 @@ app.get('/profile/:id' , profile.handle(db)); //currying function concept
 
 
 
-app.listen(3000, ()=>{
-	console.log('everything is fine!')
+app.listen(process.env.PORT || 3000, ()=>{
+	console.log(`app is running on port ${process.env.PORT}`)
 });
